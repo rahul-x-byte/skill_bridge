@@ -1,0 +1,13 @@
+{
+  "name": "skillbridge",
+  "version": "1.0.0",
+  "description": "SkillBridge - Student Skill Development and Placement Management System",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently -n API,WEB -c cyan,green \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": { "concurrently": "^8.2.2" }
+}
